@@ -106,5 +106,28 @@ document.getElementById('copyResult').onclick=async()=>{const p=profiles[a1+a2];
   const btn=document.getElementById('showResult');
   if(btn){btn.onclick=()=>{const p=profiles[a1+a2];document.getElementById('resultName').textContent=p.name;document.getElementById('resultCode').textContent=codes[a1+a2]||'VV';document.getElementById('resultText').textContent=p.text;document.getElementById('resultSteps').innerHTML=p.steps.map(x=>`<div><i></i><span>${x}</span></div>`).join('');show('result')}};
 })();
+</script><script id="vv-service-copy-script">
+(function(){
+  const codes={A1:'WAVE',A2:'SEED',A3:'MAPS',A4:'EASY',B1:'BALA',B2:'PLAN',B3:'SORT',B4:'CALM',C1:'RULE',C2:'DUAL',C3:'MIXR',C4:'LITE',D1:'PACE',D2:'SPLT',D3:'REBT',D4:'FLOW'};
+  const servicePlans={
+    A:['投资入门与账户基础课','5 天新手学习陪伴','看盘基础与仓位规划工具'],
+    B:['资产配置理念专栏','每周配置观察与学习内容','账户结构梳理与持仓学习指引'],
+    C:['趋势交易体系课','盘前市场观察与策略解读','趋势看盘与仓位规划工具'],
+    D:['交易复盘与执行方法','交易策略与工具专题','深度市场交流与学习体验']
+  };
+  const resultButton=document.getElementById('showResult');
+  if(!resultButton)return;
+  resultButton.onclick=()=>{
+    const p=profiles[a1+a2];
+    const services=servicePlans[a1]||[];
+    document.getElementById('resultName').textContent=p.name;
+    document.getElementById('resultCode').textContent=codes[a1+a2]||'VV';
+    document.getElementById('resultText').textContent=p.text;
+    document.getElementById('resultSteps').innerHTML=p.steps.map(x=>`<div><i></i><span>${x}</span></div>`).join('');
+    const list=document.querySelector('.service-placeholder');
+    if(list){list.innerHTML='<h3>你可以优先获得</h3>'+services.map(x=>`<div>${x}<span>学习服务</span></div>`).join('')}
+    show('result');
+  };
+})();
 </script></body>
 </html>
