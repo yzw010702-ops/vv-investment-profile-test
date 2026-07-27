@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#56307f">
+  <title>VV投资行为画像｜账户体检</title>
+  <style>
+    :root{--deep:#32184f;--purple:#633d91;--pink:#d95f91;--lilac:#f2ecf8;--ink:#261c32;--muted:#776e82;--line:#e8e0ed;--white:#fff;--shadow:0 18px 46px rgba(48,22,73,.16)}
+    *{box-sizing:border-box} body{margin:0;background:#f7f3f9;color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif}button{font:inherit} .shell{min-height:100vh;background:radial-gradient(circle at 95% 0,#f4dce9 0,transparent 24%),linear-gradient(155deg,#f8f5fb 0%,#f1e9f7 100%);overflow:hidden}
+    .top{display:flex;align-items:center;justify-content:space-between;max-width:550px;margin:0 auto;padding:22px 22px 10px}.brand{display:flex;gap:9px;align-items:center;color:#6c577b;font-size:12px;font-weight:800;letter-spacing:.07em}.mark{display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,#522b77,#ab6099);color:#fff;font-size:13px}.steps{display:flex;gap:5px}.step{width:20px;height:5px;border-radius:9px;background:#ded2e8}.step.on{background:var(--purple)}
+    main{width:min(100%,550px);margin:0 auto;padding:14px 22px 42px}.screen{display:none;animation:rise .34s ease}.screen.active{display:block}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .eyebrow{display:inline-flex;align-items:center;gap:6px;margin:19px 0 13px;padding:5px 10px;border-radius:99px;background:#ece2f4;color:#71468e;font-size:12px;font-weight:800}.eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:#d86191}.hero h1{margin:0;font-size:32px;letter-spacing:-.055em;line-height:1.28}.hero h1 span{color:var(--purple)}.hero p{margin:15px 0 25px;color:var(--muted);font-size:15px;line-height:1.75}.hero-card{position:relative;overflow:hidden;padding:22px;border-radius:21px;color:#fff;background:linear-gradient(130deg,#4b2774,#7b499f 55%,#b46096);box-shadow:var(--shadow)}.hero-card:after{content:"";position:absolute;right:-45px;bottom:-80px;width:190px;height:190px;border:28px solid #ffffff1d;border-radius:50%}.hero-card>*{position:relative;z-index:1}.hero-card b{display:block;margin-bottom:7px;font-size:16px}.hero-card span{color:#efe6f5;font-size:13px;line-height:1.65}.primary{width:100%;margin-top:24px;padding:15px;border:0;border-radius:14px;background:linear-gradient(105deg,#5a307f,#8d529f);color:#fff;font-weight:800;font-size:16px;box-shadow:0 8px 18px #5b327833;cursor:pointer}.primary:active{transform:scale(.985)}.tip{margin:15px 5px 0;color:#968da0;font-size:11px;line-height:1.6;text-align:center}
+    .question-head{margin:22px 0 18px}.q-index{color:#82529d;font-weight:800;font-size:12px;letter-spacing:.09em}.question-head h2{margin:7px 0 8px;font-size:24px;line-height:1.42;letter-spacing:-.035em}.question-head p{margin:0;color:var(--muted);font-size:13px}.options{display:grid;gap:11px}.option{display:flex;align-items:flex-start;gap:12px;width:100%;padding:16px;border:1px solid var(--line);border-radius:16px;color:var(--ink);background:#fff;text-align:left;box-shadow:0 5px 16px rgba(47,20,73,.035);cursor:pointer;transition:.18s}.option:hover{border-color:#b795cf;transform:translateY(-1px)}.option.selected{border-color:#8150a1;background:#fbf8fd;box-shadow:0 0 0 3px #ede4f5}.badge{display:grid;flex:0 0 auto;place-items:center;width:25px;height:25px;border-radius:8px;color:#72468f;background:#eee4f6;font-size:12px;font-weight:800}.option.selected .badge{color:#fff;background:#754695}.option b{display:block;margin:1px 0 3px;font-size:14px}.option span{display:block;color:var(--muted);font-size:12px;line-height:1.55}.next{display:flex;gap:10px;margin-top:19px}.back{width:50px;border:1px solid #dacce6;border-radius:14px;color:#6c4a83;background:#fff;font-size:18px;cursor:pointer}.next .primary{margin:0}.hintbox{margin-top:17px;padding:11px 13px;border-left:3px solid #c9abd9;border-radius:0 9px 9px 0;color:#84798e;background:#faf7fc;font-size:11px;line-height:1.65}
+    .result-top{position:relative;overflow:hidden;margin:15px 0 15px;padding:24px 22px 22px;border-radius:22px;color:#fff;background:linear-gradient(135deg,#4d2976,#854da0 58%,#c06190);box-shadow:var(--shadow)}.result-top:before{content:"";position:absolute;right:-43px;top:-48px;width:165px;height:165px;border:25px solid #ffffff1b;border-radius:50%}.result-top>*{position:relative;z-index:1}.result-tag{display:inline-block;margin-bottom:11px;padding:5px 9px;border-radius:99px;color:#f7ecfb;background:#ffffff24;font-size:11px;font-weight:800}.result-top h1{margin:0;font-size:28px;line-height:1.28;letter-spacing:-.045em}.result-top .combo{margin-top:8px;color:#eee5f4;font-size:12px}.result-card{padding:20px;border:1px solid #e6ddea;border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(47,20,73,.05)}.result-card h3{margin:0 0 9px;color:#6a4287;font-size:14px}.result-card p{margin:0;color:#504656;font-size:14px;line-height:1.78}.next-step{display:grid;gap:8px;margin-top:14px}.next-step div{display:flex;align-items:flex-start;gap:8px;padding:10px 11px;border-radius:10px;background:#f8f4fb;color:#695d70;font-size:12px;line-height:1.6}.next-step i{margin-top:3px;width:7px;height:7px;flex:0 0 auto;border-radius:50%;background:#a36bbb}.result-actions{display:grid;gap:10px;margin-top:20px}.secondary{padding:13px;border:1px solid #d9cae5;border-radius:14px;color:#70478c;background:#fff;font-weight:800;cursor:pointer}.mini-note{margin-top:16px;color:#928997;font-size:11px;line-height:1.65;text-align:center}
+  </style>
+<style id="vv-visual-upgrade">
+#intro .two-question-banner{margin:17px 0 10px;color:#312146;font-size:28px;font-weight:900;letter-spacing:-.055em;line-height:1.2}#intro .two-question-banner b{color:#bf6c90}#q1Options .option b,#q1Options .option span span{margin:0!important;color:#261c32!important;font-size:14px!important;font-weight:500!important;line-height:1.55!important}.result-top{min-height:478px!important;padding:38px 22px 22px!important;border:1px solid #dce9df!important;border-radius:24px!important;color:#213127!important;background:linear-gradient(145deg,#f8fffa,#eff9f2)!important;box-shadow:0 12px 31px rgba(44,91,62,.10)!important;text-align:center!important}.result-top:before{display:none!important}.result-top .result-tag{margin:0 0 12px!important;padding:0!important;color:#4c6e55!important;background:transparent!important;font-size:18px!important;font-weight:500!important}.result-top h1{max-width:none!important;margin:0!important;color:#283e2e!important;font-size:37px!important;font-weight:900!important;line-height:1.18!important;letter-spacing:-.06em!important}.result-top .combo{max-width:none!important;margin:5px 0 0!important;color:#4f905e!important;font-size:39px!important;font-weight:900!important;letter-spacing:.02em!important}.persona-portrait{display:grid;place-items:center;height:232px;margin-top:9px}.persona-portrait svg{width:205px;height:218px;filter:drop-shadow(0 8px 5px rgba(39,69,48,.14))}.persona-note{position:absolute!important;z-index:3!important;right:18px!important;bottom:17px!important;left:18px!important;padding:11px 13px!important;border-radius:11px!important;color:#728077!important;background:#ffffffb8!important;font-size:12px!important;text-align:left!important}.service-placeholder{margin-top:18px;padding-top:16px;border-top:1px dashed #d9cde1}.service-placeholder h3{margin:0 0 10px;color:#6a4287;font-size:14px}.service-placeholder div{display:flex;justify-content:space-between;align-items:center;margin-top:7px;padding:11px;border-radius:10px;color:#82758b;background:#faf7fc;font-size:12px}.service-placeholder span{color:#baadbf;font-size:11px}
+</style></head>
+<body>
+<div class="shell">
+  <header class="top"><div class="brand"><span class="mark">V</span>VV INVESTING PROFILE</div><div class="steps"><i class="step on" id="s1"></i><i class="step" id="s2"></i><i class="step" id="s3"></i></div></header>
+  <main>
+    <section class="screen active" id="intro">
+      <div class="hero"><span class="eyebrow">约 1 分钟 · 两道选择题</span><h1>你的投资<br><span>行为画像</span>是什么？</h1><p>有人被账户波动牵动情绪，有人卡在闲钱安排，也有人想参与机会却没有时间盯盘。先找到你当前的投资课题。</p></div>
+      <div class="hero-card"><b>这不是官方风险测评</b><span>它不收集账户密码、资金信息或交易指令，只用于生成一张投教与学习路径参考卡。</span></div>
+      <button class="primary" id="start">开始账户体检</button>
+      <p class="tip">投资有风险。本测试仅作投资行为画像参考，不构成投资建议或收益承诺。</p>
+    </section>
+
+    <section class="screen" id="q1">
+      <div class="question-head"><div class="q-index">QUESTION 01 / 02</div><h2>如果未来一段时间只能先解决一件投资相关的事，你更希望先解决哪一件？</h2><p>请选择与你当前状态更接近的一项。</p></div>
+      <div class="options" id="q1Options"></div>
+      <div class="next"><button class="back" data-back="intro" aria-label="返回">←</button><button class="primary" id="toQ2" disabled>下一题</button></div>
+    </section>
+
+    <section class="screen" id="q2">
+      <div class="question-head"><div class="q-index">QUESTION 02 / 02</div><h2>你现在更困扰的问题是？</h2><p>这道题会和前一题一起生成你的投资行为画像。</p></div>
+      <div class="options" id="q2Options"></div>
+      <div class="hintbox">测试结果用于投教与服务分流，不代替官方风险测评、适当性判断或具体投资建议。</div>
+      <div class="next"><button class="back" data-back="q1" aria-label="返回">←</button><button class="primary" id="showResult" disabled>查看我的画像</button></div>
+    </section>
+
+    <section class="screen" id="result">
+      <div class="result-top"><span class="result-tag">你的投资行为画像</span><h1 id="resultName"></h1><div class="combo" id="resultCombo"></div></div>
+      <article class="result-card"><h3>你当前的课题</h3><p id="resultText"></p><div class="next-step" id="resultSteps"></div></article>
+      <div class="result-actions"><button class="primary" id="copyResult">复制我的画像</button><button class="secondary" id="restart">重新测试</button></div>
+      <p class="mini-note">结果仅作投教与学习路径参考。涉及业务、产品或工具时，请以公司现行正式说明、适当性要求和服务协议为准。</p>
+    </section>
+  </main>
+</div>
+<script>
+const q1=[
+  ['A','刚开始接触投资','账户和基础规则还不熟'],
+  ['B','希望资金更分散','想有更长期的安排'],
+  ['C','有股票或 ETF 交易习惯','想建立趋势和纪律'],
+  ['D','交易参与较频繁','想提升执行与复盘能力']
+];
+const q2=[
+  ['1','股票占比较高','涨跌会影响心情'],
+  ['2','有一部分闲钱','不知道该怎样安排'],
+  ['3','基金、股票、ETF 都有','越配越乱'],
+  ['4','想参与机会','没有时间天天盯盘']
+];
+const profiles={
+  A1:{name:'波动敏感型新手',text:'你已经感受到市场波动会影响心情，但还没有形成自己的判断框架。现在适合先稳定账户基础与风险认知，分清“看见波动”和“需要行动”之间的差别。',steps:['先了解账户里不同资产和功能的基本区别','建立一份基础风险与波动认知清单']},
+  A2:{name:'现金待启型新手',text:'你有开始投资的意愿，也有一部分闲钱，但还没找到能理解、能坚持的起点。先建立基础认知和资金安排思路，比急着追随热点更重要。',steps:['先完成一节投资入门内容','学习如何区分短期使用资金与长期安排资金']},
+  A3:{name:'信息拼盘型新手',text:'你接触过不同产品，但信息越多，越难判断哪些内容和自己有关。下一步先学会分类和整理，建立一张清楚的账户地图。',steps:['把现有信息按“了解中、长期安排、交易参与”分类','先减少无效信息输入，再形成自己的学习清单']},
+  A4:{name:'省时探索型新手',text:'你想参与投资机会，但不希望每天投入很多时间。适合从低频、容易理解、能配合生活节奏的学习方式开始。',steps:['选择固定的学习与复盘时间','先建立低频、可持续的关注习惯']},
+  B1:{name:'仓位平衡型配置者',text:'你已经有长期安排资金的意识，但股票波动仍会牵动情绪。下一步是让账户里的不同部分承担清楚角色，减少单一方向波动带来的压力。',steps:['学习不同资产可能承担的角色','先整理账户结构，再考虑后续安排']},
+  B2:{name:'闲钱启航型配置者',text:'你认可长期和分散的思路，真正卡住的是闲钱怎样开始安排。适合先形成可持续的配置框架与记录习惯。',steps:['学习分散与持有周期的基础逻辑','建立一份适合自己节奏的资金安排记录']},
+  B3:{name:'结构整理型配置者',text:'你的账户里已有不同类型的资产，但它们还没有放进同一套逻辑。适合先整理：哪些用于长期安排，哪些用于交易参与，哪些暂未安排。',steps:['完成一张账户分类清单','为每一类资产写下持有目的与观察周期']},
+  B4:{name:'省心长期型配置者',text:'你希望资金有长期计划，也不想被每天的市场变化消耗精力。适合建立可以持续跟踪、定期回顾的长期安排。',steps:['确定自己可投入的关注时间','用固定节奏做回顾，而不是每天反复调整']},
+  C1:{name:'情绪校准型交易者',text:'你有交易习惯，也愿意学习趋势，但账户波动容易影响执行。关键课题是建立交易前计划、交易中纪律和交易后复盘。',steps:['每次交易前先写下依据与边界','建立交易后复盘记录，而不是只看结果']},
+  C2:{name:'双轨规划型交易者',text:'你愿意参与趋势机会，同时也有闲钱没有清晰安排。需要把交易参与与长期资金安排分开看，让两条路径各自有规则。',steps:['区分交易参与与长期安排的资金角色','为两条路径分别建立记录方式']},
+  C3:{name:'组合梳理型交易者',text:'你参与交易，也持有不同类型资产，但它们之间的关系还不够清楚。适合把交易部分、长期持有部分和暂未安排资金分开记录。',steps:['完成一张多资产整理清单','明确每一部分的目的，避免决策互相干扰']},
+  C4:{name:'轻量趋势型交易者',text:'你有趋势交易兴趣，但没有条件长期盯盘。适合建立轻量节奏：固定时间看框架、做复盘，把精力放在规则而不是追逐信息。',steps:['设置固定的盘后复盘时间','学习用趋势框架过滤零散信息']},
+  D1:{name:'节奏控仓型交易者',text:'你交易参与较多，也更容易直接感受账户波动带来的情绪变化。进阶方向是让每一次交易都有计划和边界，减少情绪反复接管决策。',steps:['建立交易计划与复盘的固定模板','关注交易节奏，而不是单次涨跌']},
+  D2:{name:'资金分工型交易者',text:'你交易频率较高，但闲钱如何安排仍是问题。下一步不是把所有资金放进同一种方式，而是先厘清交易参与和长期安排各自的资金角色。',steps:['完成资金用途分类','分别建立交易和长期安排的观察规则']},
+  D3:{name:'体系重构型交易者',text:'你已经参与过多类投资，但账户可能像不断叠加的拼图。需要从“继续增加”转向“重新整理”，看清每一部分存在的理由和管理方式。',steps:['停止无目的叠加，先完成账户整理','为现有每一部分写下管理规则']},
+  D4:{name:'效率进阶型交易者',text:'你有参与机会的意愿，也希望提升执行效率，但时间和精力是现实限制。适合建立更规范的复盘流程、工具使用习惯和交易执行边界。',steps:['把盘中关注点缩减为固定清单','建立适合自己时间安排的复盘流程']}
+};
+let a1='',a2='';
+const screens=['intro','q1','q2','result'];
+function show(id){screens.forEach(x=>document.getElementById(x).classList.toggle('active',x===id));document.getElementById('s1').classList.toggle('on',id!=='result');document.getElementById('s2').classList.toggle('on',id==='q2'||id==='result');document.getElementById('s3').classList.toggle('on',id==='result');window.scrollTo({top:0,behavior:'smooth'})}
+function renderOptions(id,data,answer,setAnswer){const root=document.getElementById(id);root.innerHTML='';data.forEach(([key,title,sub])=>{const b=document.createElement('button');b.className='option'+(answer===key?' selected':'');b.innerHTML=`<i class="badge">${key}</i><span><b>${title}</b><span>${sub}</span></span>`;b.onclick=()=>{setAnswer(key);renderOptions(id,data,key,setAnswer)};root.appendChild(b)})}
+function renderQ1(){renderOptions('q1Options',q1,a1,k=>{a1=k;document.getElementById('toQ2').disabled=false})}
+function renderQ2(){renderOptions('q2Options',q2,a2,k=>{a2=k;document.getElementById('showResult').disabled=false})}
+document.getElementById('start').onclick=()=>{renderQ1();show('q1')};
+document.getElementById('toQ2').onclick=()=>{renderQ2();show('q2')};
+document.querySelectorAll('[data-back]').forEach(b=>b.onclick=()=>show(b.dataset.back));
+document.getElementById('showResult').onclick=()=>{const p=profiles[a1+a2];document.getElementById('resultName').textContent=p.name;document.getElementById('resultCombo').textContent='根据你的两道选择题综合生成';document.getElementById('resultText').textContent=p.text;document.getElementById('resultSteps').innerHTML=p.steps.map(x=>`<div><i></i><span>${x}</span></div>`).join('');show('result')};
+document.getElementById('restart').onclick=()=>{a1='';a2='';show('intro')};
+document.getElementById('copyResult').onclick=async()=>{const p=profiles[a1+a2];const text=`我的 VV 投资行为画像：${p.name}\n\n${p.text}\n\n我的下一步：\n${p.steps.map((x,i)=>`${i+1}. ${x}`).join('\n')}\n\n结果仅作投教与学习路径参考，不构成投资建议。`;try{await navigator.clipboard.writeText(text);alert('画像已复制，可以发给工作室进一步交流。')}catch(e){alert('当前浏览器不支持复制，请长按或手动复制卡片内容。')}};
+</script>
+<script id="vv-visual-upgrade-script">
+(function(){
+  const introP=document.querySelector('#intro .hero p');
+  if(introP&&!document.querySelector('.two-question-banner')){const b=document.createElement('div');b.className='two-question-banner';b.innerHTML='只有 <b>两道单选题</b>';introP.before(b)}
+  const codes={A1:'WAVE',A2:'SEED',A3:'MAPS',A4:'EASY',B1:'BALA',B2:'PLAN',B3:'SORT',B4:'CALM',C1:'RULE',C2:'DUAL',C3:'MIXR',C4:'LITE',D1:'PACE',D2:'SPLT',D3:'REBT',D4:'FLOW'};
+  const portrait=`<div class="persona-portrait" aria-hidden="true"><svg viewBox="0 0 240 250" xmlns="http://www.w3.org/2000/svg"><ellipse cx="121" cy="232" rx="70" ry="10" fill="#c8d9cd" opacity=".58"/><path d="M66 177 L33 151 L42 137 L81 161Z" fill="#e3b598"/><path d="M174 177 L207 151 L198 137 L159 161Z" fill="#e3b598"/><path d="M39 136 L25 127 L35 115 L49 130Z" fill="#f4cfb4"/><path d="M201 136 L215 127 L205 115 L191 130Z" fill="#f4cfb4"/><path d="M77 164 L121 179 L165 164 L177 224 L64 224Z" fill="#82639a"/><path d="M77 164 L121 179 L110 224 L64 224Z" fill="#f2e7f5"/><path d="M165 164 L121 179 L134 224 L177 224Z" fill="#c88aad"/><path d="M102 152 L121 179 L140 152 L136 184 L121 196 L106 184Z" fill="#fff"/><path d="M109 205 L123 205 L119 232 L102 232Z" fill="#272735"/><path d="M132 205 L145 205 L153 232 L136 232Z" fill="#272735"/><path d="M93 76 L147 76 L151 141 L121 165 L89 141Z" fill="#f3c8ae"/><path d="M87 83 L92 43 L130 27 L169 51 L154 91 L143 76 L139 59 L109 70 L99 96Z" fill="#2c2830"/><path d="M92 43 L130 27 L130 65 L109 70Z" fill="#4a444b"/><path d="M130 27 L169 51 L139 59 L130 65Z" fill="#353239"/><path d="M88 84 L65 96 L88 115Z" fill="#2c2830"/><path d="M153 82 L177 95 L154 116Z" fill="#2c2830"/><path d="M104 108 L113 105 L114 112 L104 113Z" fill="#2b2630"/><path d="M133 108 L142 105 L143 112 L133 113Z" fill="#2b2630"/><path d="M115 130 Q121 136 128 130" fill="none" stroke="#9e5d61" stroke-width="2" stroke-linecap="round"/></svg></div>`;
+  const resultTop=document.querySelector('#result .result-top');
+  if(resultTop){resultTop.innerHTML='<span class="result-tag">你的投资类型是：</span><h1 id="resultName"></h1><div class="combo" id="resultCode"></div>'+portrait+'<div class="persona-note">只有两道选择题，也能看见你当前更需要解决的投资课题。</div>'}
+  const resultCard=document.querySelector('#result .result-card');
+  if(resultCard&&!document.querySelector('.service-placeholder')){const slots=document.createElement('div');slots.className='service-placeholder';slots.innerHTML='<h3>你将获得的服务</h3><div>xxx <span>服务内容待补充</span></div><div>xxx <span>服务内容待补充</span></div><div>xxx <span>服务内容待补充</span></div>';resultCard.appendChild(slots)}
+  const btn=document.getElementById('showResult');
+  if(btn){btn.onclick=()=>{const p=profiles[a1+a2];document.getElementById('resultName').textContent=p.name;document.getElementById('resultCode').textContent=codes[a1+a2]||'VV';document.getElementById('resultText').textContent=p.text;document.getElementById('resultSteps').innerHTML=p.steps.map(x=>`<div><i></i><span>${x}</span></div>`).join('');show('result')}};
+})();
+</script></body>
+</html>
